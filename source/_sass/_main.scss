@@ -1,0 +1,23 @@
+.splash-page {
+  margin: 0;
+  padding: 0;
+  margin-top: -50px;
+  .panel {
+    height: 400px;
+    &--top-left {
+      background-color: #2c4758;
+    }
+    &--top-right {
+      background-image: url('../images/zika-bw.jpg');
+      background-size: 100%;
+    }
+    &--bottom-left {
+      background-image: url('../images/zika-bw.jpg');
+      background-size: 100%;
+    }
+    &--bottom-right {
+      background-image: url('../images/zika-bw.jpg');
+      background-size: 100%;
+    }
+  }
+}
