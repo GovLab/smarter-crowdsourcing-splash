@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box; }
+
+.footer {
+  padding-top: 40px; }
+
+.top-bar__logo {
+  margin-left: -50px; }
+
+.top-bar__button {
+  background-color: #FFAA00; }
+  .top-bar__button:hover {
+    background-color: #e69900; }
+
+.splash-page {
+  margin: 0;
+  padding: 0;
+  margin-top: -50px; }
+  .splash-page .panel {
+    height: 390px;
+    color: white;
+    background-repeat: no-repeat;
+    position: relative; }
+    .splash-page .panel__logo {
+      width: 100px;
+      display: block;
+      margin: auto;
+      padding-top: 80px; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel__logo {
+          padding-top: 50px; } }
+      .splash-page .panel__logo--bottom {
+        padding-top: 70px; }
+        @media (max-width: 39.9375em) {
+          .splash-page .panel__logo--bottom {
+            padding-top: 50px; } }
+    .splash-page .panel__title {
+      font-size: 1.8rem;
+      display: block;
+      margin: auto;
+      text-align: center;
+      font-weight: 300;
+      padding-top: 15px; }
+    .splash-page .panel__text {
+      text-align: center;
+      font-size: 1.05rem;
+      padding-left: 130px;
+      padding-right: 130px; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel__text {
+          padding-left: 40px;
+          padding-right: 40px; } }
+    .splash-page .panel--top-left {
+      background-color: #2c4758; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--top-left {
+          height: 440px; } }
+      .splash-page .panel--top-left__text {
+        position: absolute;
+        text-align: right;
+        top: 90px;
+        right: 100px;
+        padding-left: 190px; }
+        @media (max-width: 39.9375em) {
+          .splash-page .panel--top-left__text {
+            padding: 5px;
+            padding-top: 90px;
+            text-align: center;
+            position: static; } }
+        .splash-page .panel--top-left__text h3 {
+          font-size: 1.8rem;
+          padding: 0;
+          margin: 0; }
+        .splash-page .panel--top-left__text p {
+          font-size: 1.05rem; }
+          @media (max-width: 39.9375em) {
+            .splash-page .panel--top-left__text p {
+              padding-left: 10px;
+              padding-right: 10px; } }
+    .splash-page .panel--top-right {
+      background-image: url("../images/corruption-bw.png");
+      background-size: 100%;
+      background-color: #88B04B;
+      background-blend-mode: multiply; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--top-right {
+          background-size: cover; } }
+    .splash-page .panel--bottom-left {
+      background-image: url("../images/zika-bw.jpg");
+      background-color: #04ccb7;
+      background-blend-mode: multiply;
+      background-size: 120%;
+      background-position: 70% 30%; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--bottom-left {
+          background-size: cover; } }
+    .splash-page .panel--bottom-right {
+      background-image: url("../images/cotopaxi-bw.jpg");
+      background-color: #ff534e;
+      background-blend-mode: multiply;
+      background-size: 140%;
+      background-position: 65% 10%; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--bottom-right {
+          background-size: cover; } }
