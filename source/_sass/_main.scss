@@ -55,24 +55,26 @@
       @include breakpoint($small-only) {
         height: 440px;
       }
-
       &__text {
         position: absolute;
         text-align: right;
-        top: 70px;
-        right: 100px;
-        padding-left: 190px;
+
+        @include breakpoint($medium) {
+          top: 60px;
+          right: 60px;
+          padding-left: 50px;
+        }
+        @include breakpoint($large) {
+          top: 80px;
+          right: 100px;
+          padding-left: 190px;
+        }
         @include breakpoint($small-only) {
           padding: 5px;
-          padding-top: 90px;
+          padding-top: 100px;
           text-align: center;
           position: static;
         }
-        // @include breakpoint($medium-only) {
-        //   top: 55px;
-        //   right: 60px;
-        //   padding-left: 50px;
-        // }
         h3 {
           font-size: 1.8rem;
           padding: 0;
@@ -117,6 +119,14 @@
       background-position: 65% 10%;
       @include breakpoint($small-only) {
         background-size:cover;
+      }
+    }
+  }
+  .methodology {
+    &__img {
+      @include breakpoint($small-only) {
+        display: block;
+        margin: auto;
       }
     }
   }
