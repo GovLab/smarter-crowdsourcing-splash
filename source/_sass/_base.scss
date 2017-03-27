@@ -4,5 +4,16 @@ body {
 
 .footer {
   padding-top: 40px;
-  
+
+}
+
+.top-bar__logo {
+  margin-left: -50px;
+}
+
+.top-bar__button {
+  background-color: #FFAA00;
+  &:hover {
+    background-color: darken(#FFAA00, 5);
+  }
 }
