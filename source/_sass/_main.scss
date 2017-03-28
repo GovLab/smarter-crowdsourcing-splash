@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   margin-top: -50px;
+  .panel-links {
+    &:hover {
+      text-decoration: none;
+    }
+  }
   .panel {
     height: 390px;
     color: white;
@@ -94,6 +99,9 @@
       background-size: 110%;
       background-color: #88B04B;
       background-blend-mode: multiply;
+      &:hover {
+        background-color: #FFAA00;
+      }
       @include breakpoint($small-only) {
         background-size:cover;
       }
@@ -107,6 +115,9 @@
       background-blend-mode: multiply;
       background-size: 132%;
       background-position: 65% 30%;
+      &:hover {
+        background-color: #FFAA00;
+      }
       @include breakpoint($small-only) {
         background-size:cover;
       }
@@ -117,6 +128,9 @@
       background-blend-mode: multiply;
       background-size: 145%;
       background-position: 65% 10%;
+      &:hover {
+        background-color: #FFAA00;
+      }
       @include breakpoint($small-only) {
         background-size:cover;
       }
