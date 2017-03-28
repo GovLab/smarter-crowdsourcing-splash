@@ -19,6 +19,8 @@
   margin: 0;
   padding: 0;
   margin-top: -50px; }
+  .splash-page .panel-links:hover {
+    text-decoration: none; }
   .splash-page .panel {
     height: 390px;
     color: white;
@@ -102,6 +104,8 @@
       background-size: 110%;
       background-color: #88B04B;
       background-blend-mode: multiply; }
+      .splash-page .panel--top-right:hover {
+        background-color: #FFAA00; }
       @media (max-width: 39.9375em) {
         .splash-page .panel--top-right {
           background-size: cover; } }
@@ -114,6 +118,8 @@
       background-blend-mode: multiply;
       background-size: 132%;
       background-position: 65% 30%; }
+      .splash-page .panel--bottom-left:hover {
+        background-color: #FFAA00; }
       @media (max-width: 39.9375em) {
         .splash-page .panel--bottom-left {
           background-size: cover; } }
@@ -123,6 +129,8 @@
       background-blend-mode: multiply;
       background-size: 145%;
       background-position: 65% 10%; }
+      .splash-page .panel--bottom-right:hover {
+        background-color: #FFAA00; }
       @media (max-width: 39.9375em) {
         .splash-page .panel--bottom-right {
           background-size: cover; } }
