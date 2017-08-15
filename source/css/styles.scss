@@ -10,6 +10,13 @@ $medium: screen and (min-width: 40em);
 $medium-only: screen and (min-width: 40em) and (max-width: 63.9375em);
 $large: screen and (min-width: 64em);
 
+$sc-blue: #2c4758;
+$sc-yellow: #FFAA00;
+$green: #88B04B;
+$aqua: #04ccb7;
+$red: #ff534e;
+
 @import 'breakpoint';
 @import 'base';
 @import 'main';
+@import 'about';

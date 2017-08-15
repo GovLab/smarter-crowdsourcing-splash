@@ -1,0 +1,60 @@
+.top-section {
+  &--sc-blue {
+    background-color: $sc-blue;
+    margin-top: -50px;
+    &__logo {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.about {
+  font-size: 1.2rem;
+  padding: 50px;
+  @include breakpoint($small-only) {
+    padding: 0;
+  }
+}
+
+.grey {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.projects {
+
+
+  p {
+    margin: 0;
+    padding-bottom: 80px;
+  }
+
+  &__logo {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 80%;
+    // padding-left: 50px;
+    // padding-right: 50px;
+  }
+}
+
+
+.methodology {
+  h5 {
+    // padding-top: 20px;
+    color: $sc-blue;
+    margin-bottom: 10px;
+  }
+
+  .top {
+    padding-top: 50px;
+  }
+
+  .bottom {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

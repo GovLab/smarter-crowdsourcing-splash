@@ -1,5 +1,5 @@
 body {
-
+  
 }
 
 .footer {
@@ -19,5 +19,13 @@ body {
 }
 
 .divider--blue {
-  background-color: #2c4758;
+  background-color: #233946;
+}
+
+.divider--yellow {
+  background-color: $sc-yellow;
+}
+
+.main-menu {
+  box-shadow: none!important;
 }
