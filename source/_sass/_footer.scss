@@ -26,7 +26,7 @@
         text-align: center;
         > img {
           // width: 50%;
-          @include breakpoint($desktop) { width: 38%; }
+          @include breakpoint($desktop) { width: 39%; }
           @include breakpoint($medium-only) { width: 25%; }
           @include breakpoint($small-only) { width: 50%; }
           // padding:0 ;
@@ -42,7 +42,14 @@
           > img {
             @include breakpoint($desktop) { width: 22%; }
             @include breakpoint($medium-only) { width: 13%; }
-            @include breakpoint($small-only) { width: 28%; }
+            @include breakpoint($small-only) { width: 27%; }
+          }
+        }
+        &--sm {
+          > img {
+            @include breakpoint($desktop) { width: 30%; }
+            @include breakpoint($medium-only) { width: 20%; }
+            @include breakpoint($small-only) { width: 39%; }
           }
         }
       }
