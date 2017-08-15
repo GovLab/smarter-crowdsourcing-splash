@@ -10,13 +10,25 @@ $medium: screen and (min-width: 40em);
 $medium-only: screen and (min-width: 40em) and (max-width: 63.9375em);
 $large: screen and (min-width: 64em);
 
+$mobile-only: max-width 767px;
+$mobile-landscape: (max-width 767px) (orientation landscape);
+$mobile-portrait: (max-width 767px) (orientation portrait);
+$tablet: min-width 768px;
+$touch: max-width 1024px;
+$desktop: 1025px;
+
 $sc-blue: #2c4758;
 $sc-yellow: #FFAA00;
 $green: #88B04B;
 $aqua: #04ccb7;
 $red: #ff534e;
 
+@mixin transition {
+  transition: all .4s ease;
+}
+
 @import 'breakpoint';
 @import 'base';
 @import 'main';
 @import 'about';
+@import 'footer';
