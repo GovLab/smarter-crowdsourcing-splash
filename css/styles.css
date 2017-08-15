@@ -13,7 +13,13 @@
     background-color: #e69900; }
 
 .divider--blue {
-  background-color: #2c4758; }
+  background-color: #233946; }
+
+.divider--yellow {
+  background-color: #FFAA00; }
+
+.main-menu {
+  box-shadow: none !important; }
 
 .splash-page {
   margin: 0;
@@ -138,3 +144,38 @@
     .splash-page .methodology__img {
       display: block;
       margin: auto; } }
+
+.top-section--sc-blue {
+  background-color: #2c4758;
+  margin-top: -50px; }
+  .top-section--sc-blue__logo {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+
+.about {
+  font-size: 1.2rem;
+  padding: 50px; }
+  @media (max-width: 39.9375em) {
+    .about {
+      padding: 0; } }
+
+.grey {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.projects p {
+  margin: 0;
+  padding-bottom: 80px; }
+.projects__logo {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 80%; }
+
+.methodology h5 {
+  color: #2c4758;
+  margin-bottom: 10px; }
+.methodology .top {
+  padding-top: 50px; }
+.methodology .bottom {
+  margin-bottom: 0; }
+.methodology p {
+  margin-top: 0; }
