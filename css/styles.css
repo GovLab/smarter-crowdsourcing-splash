@@ -144,6 +144,11 @@
     .splash-page .methodology__img {
       display: block;
       margin: auto; } }
+  .splash-page .partners .column {
+    text-align: center;
+    padding: 40px; }
+    .splash-page .partners .column img {
+      max-height: 100px; }
 
 .top-section--sc-blue {
   background-color: #2c4758;
