@@ -161,43 +161,45 @@
     .partners .img-container img:hover {
       transition: all .4s ease;
       opacity: 1; }
-.partners .sm img {
+  .partners .img-container.text {
+    padding-top: 40px; }
+.partners a.sm img {
   max-width: 70%; }
   @media (max-width: 39.9375em) {
-    .partners .sm img {
+    .partners a.sm img {
       max-width: 100%; } }
-.partners .m img {
+.partners a.m img {
   max-width: 60%; }
   @media (max-width: 39.9375em) {
-    .partners .m img {
+    .partners a.m img {
       max-width: 88%; } }
-.partners .mm img {
+.partners a.mm img {
   max-width: 80%; }
   @media (max-width: 39.9375em) {
-    .partners .mm img {
+    .partners a.mm img {
       max-width: 100%; } }
-.partners .m-lg img {
+.partners a.m-lg img {
   max-width: 45%; }
   @media (max-width: 39.9375em) {
-    .partners .m-lg img {
+    .partners a.m-lg img {
       max-width: 65%; } }
-.partners .lg img {
+.partners a.lg img {
   max-width: 35%; }
   @media (max-width: 39.9375em) {
-    .partners .lg img {
+    .partners a.lg img {
       max-width: 45%; } }
-.partners .text {
+.partners a.text {
   font-size: 1.5rem;
   font-weight: bold;
   opacity: 0.7;
   line-height: 95%; }
   @media (max-width: 63.9375em) {
-    .partners .text {
+    .partners a.text {
       font-size: 1.2rem; } }
   @media (max-width: 39.9375em) {
-    .partners .text {
+    .partners a.text {
       font-size: 1.3rem; } }
-  .partners .text:hover {
+  .partners a.text:hover {
     transition: all .4s ease;
     opacity: 1;
     text-decoration: none; }
