@@ -32,6 +32,9 @@
     color: white;
     background-repeat: no-repeat;
     position: relative; }
+    @media (max-width: 39.9375em) {
+      .splash-page .panel {
+        height: 450px; } }
     .splash-page .panel__logo {
       width: 100px;
       display: block;
