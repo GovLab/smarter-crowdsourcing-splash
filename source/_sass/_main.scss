@@ -12,6 +12,9 @@
     color: white;
     background-repeat: no-repeat;
     position: relative;
+    @include breakpoint($small-only) {
+      height: 450px;
+    }
     &__logo {
       width: 100px;
       display: block;
