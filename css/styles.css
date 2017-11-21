@@ -207,6 +207,17 @@
     opacity: 1;
     text-decoration: none; }
 
+.sticky {
+  background-color: rgba(0, 0, 0, 0.8); }
+  .sticky .sticky__title {
+    font-size: 1.2rem; }
+  .sticky p {
+    font-weight: 400; }
+  .sticky img {
+    float: left;
+    width: 100px;
+    margin-right: 40px; }
+
 .top-section--sc-blue {
   background-color: #2c4758;
   margin-top: -50px; }
