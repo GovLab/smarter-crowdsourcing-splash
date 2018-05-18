@@ -120,9 +120,20 @@ title: Smarter Crowdsourcing
       <div class="row">
         <div class="column small-12">
           <i class="material-icons sticky__close js-close-sticky">close</i>
-          <a href="//anticorruption.smartercrowdsourcing.org/files/scac_web.pdf"><img src="//anticorruption.smartercrowdsourcing.org/images/scac-cover.png"></a>
+          <a href="//anticorruption.smartercrowdsourcing.org/files/scac_web.pdf" target="_blank" class="file-report-en"><img src="//anticorruption.smartercrowdsourcing.org/images/scac-cover.png"></a>
           <h3 class="sticky__title">Smarter Crowdsourcing for Anti-corruption</h3>
-          <p>A Handbook of Innovative Legal, Technical, and Policy Proposals and a Guide to their Implementation. <br>Download it <a href="//anticorruption.smartercrowdsourcing.org/files/scac_web.pdf">here</a></p>
+          <p>A Handbook of Innovative Legal, Technical, and Policy Proposals and a Guide to their Implementation. <br>Download it <a href="//anticorruption.smartercrowdsourcing.org/files/scac_web.pdf" target="_blank" class="file-report-en">here</a></p>
         </div>
       </div>
     </div>
+
+
+    <script type="text/javascript">
+      $(".file-report-en").on('click', function() {
+        ga('send', 'event', 'File', 'download', 'Final Report PDF (EN)');
+      });
+
+      $(".file-report-es").on('click', function() {
+        ga('send', 'event', 'File', 'download', 'Final Report PDF (ES)');
+      });
+    </script>
