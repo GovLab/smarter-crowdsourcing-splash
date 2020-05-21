@@ -48,6 +48,18 @@
         @media (max-width: 39.9375em) {
           .splash-page .panel__logo--bottom {
             padding-top: 50px; } }
+      .splash-page .panel__logo--bottom-100 {
+        width: 150px;
+        padding-top: 80px; }
+        @media (max-width: 39.9375em) {
+          .splash-page .panel__logo--bottom-100 {
+            padding-top: 50px; } }
+      .splash-page .panel__logo--bottom-covid {
+        width: 200px;
+        padding-top: 80px; }
+        @media (max-width: 39.9375em) {
+          .splash-page .panel__logo--bottom-covid {
+            padding-top: 50px; } }
     .splash-page .panel__title {
       font-size: 1.8rem;
       display: block;
@@ -142,6 +154,28 @@
         background-color: #FFAA00; }
       @media (max-width: 39.9375em) {
         .splash-page .panel--bottom-right {
+          background-size: cover; } }
+    .splash-page .panel--bottom-left-100 {
+      background-image: url("../images/100q-bg.jpg");
+      background-color: #0E4365;
+      background-blend-mode: multiply;
+      background-size: 145%;
+      background-position: 65% 10%; }
+      .splash-page .panel--bottom-left-100:hover {
+        background-color: #FFAA00; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--bottom-left-100 {
+          background-size: cover; } }
+    .splash-page .panel--bottom-right-grey {
+      background-image: url("../images/covid-bg.png");
+      background-color: #444444;
+      background-blend-mode: multiply;
+      background-size: 145%;
+      background-position: 65% 10%; }
+      .splash-page .panel--bottom-right-grey:hover {
+        background-color: #FFAA00; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--bottom-right-grey {
           background-size: cover; } }
   @media (max-width: 39.9375em) {
     .splash-page .methodology__img {
