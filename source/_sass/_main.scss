@@ -29,6 +29,20 @@
           padding-top: 50px;
         }
       }
+      &--bottom-100 {
+        width: 150px;
+        padding-top: 80px;
+        @include breakpoint($small-only) {
+          padding-top: 50px;
+        }
+      }
+      &--bottom-covid {
+        width: 200px;
+        padding-top: 80px;
+        @include breakpoint($small-only) {
+          padding-top: 50px;
+        }
+      }
     }
     &__title {
       font-size: 1.8rem;
@@ -138,7 +152,34 @@
         background-size:cover;
       }
     }
+    &--bottom-left-100 {
+      background-image: url('../images/100q-bg.jpg');
+      background-color: #0E4365;
+      background-blend-mode: multiply;
+      background-size: 145%;
+      background-position: 65% 10%;
+      &:hover {
+        background-color: #FFAA00;
+      }
+      @include breakpoint($small-only) {
+        background-size:cover;
+      }
+    }
+    &--bottom-right-grey {
+      background-image: url('../images/covid-bg.png');
+      background-color: #444444;
+      background-blend-mode: multiply;
+      background-size: 145%;
+      background-position: 65% 10%;
+      &:hover {
+        background-color: #FFAA00;
+      }
+      @include breakpoint($small-only) {
+        background-size:cover;
+      }
+    }
   }
+  
   .methodology {
     &__img {
       @include breakpoint($small-only) {
