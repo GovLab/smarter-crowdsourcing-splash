@@ -167,7 +167,7 @@
     }
     &--bottom-right-covid {
       background-image: url('../images/covid-bg.png');
-      background-color: #ee964b;
+      background-color: $orange;
       background-blend-mode: multiply;
       background-size: 145%;
       background-position: 65% 10%;
