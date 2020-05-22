@@ -166,16 +166,16 @@
       @media (max-width: 39.9375em) {
         .splash-page .panel--bottom-left-100 {
           background-size: cover; } }
-    .splash-page .panel--bottom-right-grey {
+    .splash-page .panel--bottom-right-covid {
       background-image: url("../images/covid-bg.png");
-      background-color: #444444;
+      background-color: #ee964b;
       background-blend-mode: multiply;
       background-size: 145%;
       background-position: 65% 10%; }
-      .splash-page .panel--bottom-right-grey:hover {
+      .splash-page .panel--bottom-right-covid:hover {
         background-color: #FFAA00; }
       @media (max-width: 39.9375em) {
-        .splash-page .panel--bottom-right-grey {
+        .splash-page .panel--bottom-right-covid {
           background-size: cover; } }
   @media (max-width: 39.9375em) {
     .splash-page .methodology__img {
