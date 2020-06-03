@@ -55,8 +55,8 @@
           .splash-page .panel__logo--bottom-100 {
             padding-top: 50px; } }
       .splash-page .panel__logo--bottom-covid {
-        width: 200px;
-        padding-top: 80px; }
+        width: 100px;
+        padding-top: 70px; }
         @media (max-width: 39.9375em) {
           .splash-page .panel__logo--bottom-covid {
             padding-top: 50px; } }
@@ -168,7 +168,7 @@
           background-size: cover; } }
     .splash-page .panel--bottom-right-covid {
       background-image: url("../images/covid-bg.png");
-      background-color: #ee964b;
+      background-color: #CB1866;
       background-blend-mode: multiply;
       background-size: 145%;
       background-position: 65% 10%; }
