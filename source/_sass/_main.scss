@@ -37,8 +37,8 @@
         }
       }
       &--bottom-covid {
-        width: 200px;
-        padding-top: 80px;
+        width: 100px;
+        padding-top: 70px;
         @include breakpoint($small-only) {
           padding-top: 50px;
         }
@@ -167,7 +167,7 @@
     }
     &--bottom-right-covid {
       background-image: url('../images/covid-bg.png');
-      background-color: #ee964b;
+      background-color: $pink;
       background-blend-mode: multiply;
       background-size: 145%;
       background-position: 65% 10%;
