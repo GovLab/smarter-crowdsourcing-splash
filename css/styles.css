@@ -120,6 +120,19 @@
             .splash-page .panel--top-left__text p {
               padding-left: 10px;
               padding-right: 10px; } }
+    .splash-page .panel--top-right-new-measures {
+      background-image: url("../images/education-bg.jpg");
+      background-size: 110%;
+      background-color: #000eaa;
+      background-blend-mode: multiply; }
+      .splash-page .panel--top-right-new-measures:hover {
+        background-color: #FFAA00; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--top-right-new-measures {
+          background-size: cover; } }
+      @media (min-width: 40em) {
+        .splash-page .panel--top-right-new-measures {
+          background-size: cover; } }
     .splash-page .panel--top-right {
       background-image: url("../images/corruption-bw.jpg");
       background-size: 110%;
