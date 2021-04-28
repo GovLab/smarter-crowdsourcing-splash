@@ -28,7 +28,7 @@
   .splash-page .panel-links:hover {
     text-decoration: none; }
   .splash-page .panel {
-    height: 390px;
+    height: 420px;
     color: white;
     background-repeat: no-repeat;
     position: relative; }
@@ -101,7 +101,7 @@
             padding-left: 50px; } }
         @media (min-width: 64em) {
           .splash-page .panel--top-left__text {
-            top: 80px;
+            top: 120px;
             right: 100px;
             padding-left: 190px; } }
         @media (max-width: 39.9375em) {
@@ -120,6 +120,19 @@
             .splash-page .panel--top-left__text p {
               padding-left: 10px;
               padding-right: 10px; } }
+    .splash-page .panel--top-right-experiential-learning {
+      background-image: url("../images/experiential-learning.jpg");
+      background-size: 110%;
+      background-color: #760aa3;
+      background-blend-mode: multiply; }
+      .splash-page .panel--top-right-experiential-learning:hover {
+        background-color: #FFAA00; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--top-right-experiential-learning {
+          background-size: cover; } }
+      @media (min-width: 40em) {
+        .splash-page .panel--top-right-experiential-learning {
+          background-size: cover; } }
     .splash-page .panel--top-right-new-measures {
       background-image: url("../images/education-bg.jpg");
       background-size: 110%;
