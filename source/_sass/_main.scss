@@ -8,7 +8,7 @@
     }
   }
   .panel {
-    height: 390px;
+    height: 420px;
     color: white;
     background-repeat: no-repeat;
     position: relative;
@@ -87,7 +87,7 @@
           padding-left: 50px;
         }
         @include breakpoint($large) {
-          top: 80px;
+          top: 120px;
           right: 100px;
           padding-left: 190px;
         }
@@ -111,7 +111,21 @@
         }
       }
     }
-    
+    &--top-right-experiential-learning {
+      background-image: url('../images/experiential-learning.jpg');
+      background-size: 110%;
+      background-color: #760aa3;
+      background-blend-mode: multiply;
+      &:hover {
+        background-color: #FFAA00;
+      }
+      @include breakpoint($small-only) {
+        background-size:cover;
+      }
+      @include breakpoint($medium) {
+        background-size:cover;
+      }
+    }
     &--top-right-new-measures {
       background-image: url('../images/education-bg.jpg');
       background-size: 110%;
