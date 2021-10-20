@@ -120,6 +120,19 @@
             .splash-page .panel--top-left__text p {
               padding-left: 10px;
               padding-right: 10px; } }
+    .splash-page .panel--top-right-modernization {
+      background-image: url("../images/modernization.png");
+      background-size: 110%;
+      background-color: #ff5410;
+      background-blend-mode: multiply; }
+      .splash-page .panel--top-right-modernization:hover {
+        background-color: #FFAA00; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--top-right-modernization {
+          background-size: cover; } }
+      @media (min-width: 40em) {
+        .splash-page .panel--top-right-modernization {
+          background-size: cover; } }
     .splash-page .panel--top-right-experiential-learning {
       background-image: url("../images/experiential-learning.jpg");
       background-size: 110%;
