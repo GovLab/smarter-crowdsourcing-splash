@@ -111,6 +111,21 @@
         }
       }
     }
+    &--top-right-modernization {
+      background-image: url('../images/modernization.png');
+      background-size: 110%;
+      background-color: #ff5410;
+      background-blend-mode: multiply;
+      &:hover {
+        background-color: #FFAA00;
+      }
+      @include breakpoint($small-only) {
+        background-size:cover;
+      }
+      @include breakpoint($medium) {
+        background-size:cover;
+      }
+    }
     &--top-right-experiential-learning {
       background-image: url('../images/experiential-learning.jpg');
       background-size: 110%;
