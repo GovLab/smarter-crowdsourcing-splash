@@ -254,6 +254,8 @@
     }
     text-align: center;
     img {
+      max-width: 200px;
+      max-height: 120px;
       border: solid;
       border-color: transparent;
       @include transition;
