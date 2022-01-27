@@ -230,6 +230,8 @@
       padding-top: 15px;
       padding-bottom: 15px; } }
   .partners .img-container img {
+    max-width: 200px;
+    max-height: 120px;
     border: solid;
     border-color: transparent;
     transition: all .4s ease;
