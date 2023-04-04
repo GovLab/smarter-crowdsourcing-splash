@@ -7,6 +7,20 @@
       text-decoration: none;
     }
   }
+  .smc-logo  {
+    display:flex;
+    flex-direction: row;
+  }
+  .smc-logo p{
+    margin-bottom:0;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .smc-logo img{
+    height: 40px;
+  }
   .panel {
     height: 420px;
     color: white;
@@ -115,6 +129,21 @@
       background-image: url('../images/modernization.png');
       background-size: 110%;
       background-color: #ff5410;
+      background-blend-mode: multiply;
+      &:hover {
+        background-color: #FFAA00;
+      }
+      @include breakpoint($small-only) {
+        background-size:cover;
+      }
+      @include breakpoint($medium) {
+        background-size:cover;
+      }
+    }
+    &--top-right-election {
+      background-image: url('../images/election.jpg');
+      background-size: 110%;
+      background-color: #b8003d;
       background-blend-mode: multiply;
       &:hover {
         background-color: #FFAA00;
