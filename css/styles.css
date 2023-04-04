@@ -27,6 +27,17 @@
   margin-top: -50px; }
   .splash-page .panel-links:hover {
     text-decoration: none; }
+  .splash-page .smc-logo {
+    display: flex;
+    flex-direction: row; }
+  .splash-page .smc-logo p {
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    font-weight: 600; }
+  .splash-page .smc-logo img {
+    height: 40px; }
   .splash-page .panel {
     height: 420px;
     color: white;
@@ -132,6 +143,19 @@
           background-size: cover; } }
       @media (min-width: 40em) {
         .splash-page .panel--top-right-modernization {
+          background-size: cover; } }
+    .splash-page .panel--top-right-election {
+      background-image: url("../images/election.jpg");
+      background-size: 110%;
+      background-color: #b8003d;
+      background-blend-mode: multiply; }
+      .splash-page .panel--top-right-election:hover {
+        background-color: #FFAA00; }
+      @media (max-width: 39.9375em) {
+        .splash-page .panel--top-right-election {
+          background-size: cover; } }
+      @media (min-width: 40em) {
+        .splash-page .panel--top-right-election {
           background-size: cover; } }
     .splash-page .panel--top-right-experiential-learning {
       background-image: url("../images/experiential-learning.jpg");
