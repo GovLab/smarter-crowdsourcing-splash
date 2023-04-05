@@ -9,6 +9,13 @@ body {
 
 .top-bar__logo {
   margin-left: -50px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#govlab-logo{
+  height: 30px;
 }
 
 .top-bar__button {
