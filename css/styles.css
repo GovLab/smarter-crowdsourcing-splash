@@ -32,6 +32,8 @@
   margin: 0;
   padding: 0;
   margin-top: -50px; }
+  .splash-page .panel-links {
+    cursor: pointer; }
   .splash-page .panel-links:hover {
     text-decoration: none; }
   .splash-page .smc-logo {
