@@ -42,6 +42,7 @@
     @media (max-width: 39.9375em) {
       .splash-page .smc-logo {
         flex-direction: column; 
+        align-items: center;
         /* height: 450px;  */
       } }
   .splash-page .smc-logo p {
@@ -271,10 +272,15 @@
       @media (max-width: 39.9375em) {
         .splash-page .panel--bottom-right-covid {
           background-size: cover; } }
+          .splash-page .methodology__img {
+            padding: 6em 0 6em 0;
+ }
   @media (max-width: 39.9375em) {
     .splash-page .methodology__img {
       display: block;
-      margin: auto; } }
+      margin: auto; 
+      padding: 2em 0 2em 0;
+    } }
 
 .splash-page .smc-buttons
 
