@@ -152,6 +152,20 @@
       @media (min-width: 40em) {
         .splash-page .panel--top-right-modernization {
           background-size: cover; } }
+
+          .splash-page .panel--top-left-policysynth {
+            background-image: url("../images/policysynth.png");
+            background-size: 110%;
+            background-color: #1da7d0;
+            background-blend-mode: multiply; }
+            .splash-page .panel--top-left-policysynth:hover {
+              background-color: #FFAA00; }
+            @media (max-width: 39.9375em) {
+              .splash-page .panel--top-left-policysynth {
+                background-size: cover; } }
+            @media (min-width: 40em) {
+              .splash-page .panel--top-left-policysynth {
+                background-size: cover; } }
     .splash-page .panel--top-right-election {
       background-image: url("../images/election.jpg");
       background-size: 110%;
@@ -258,6 +272,7 @@
 {
     
   display:flex; flex-direction: row;
+  justify-content: space-around;
 }
 
 @media (max-width: 39.9375em) {
