@@ -108,7 +108,8 @@
       background-color: #2c4758; }
       @media (max-width: 39.9375em) {
         .splash-page .panel--top-left {
-          height: 440px; } }
+          height: 500px; } 
+        }
       .splash-page .panel--top-left__text {
         position: absolute;
         text-align: right; }
@@ -252,6 +253,31 @@
       display: block;
       margin: auto; } }
 
+.splash-page .smc-buttons
+
+{
+    
+  display:flex; flex-direction: row;
+}
+
+@media (max-width: 39.9375em) {
+  .splash-page .smc-buttons
+
+  {
+      
+    flex-direction: column;
+  } 
+  .splash-page .smc-buttons button
+
+  {
+      
+    width:100%;
+  }
+
+}
+
+
+
 .partners .img-container {
   padding: 30px;
   text-align: center; }
@@ -338,6 +364,7 @@
     .about {
       padding: 0; } }
 
+  
 .grey {
   background-color: rgba(0, 0, 0, 0.05); }
 
