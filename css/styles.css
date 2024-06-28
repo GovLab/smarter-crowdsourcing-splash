@@ -42,7 +42,7 @@
     @media (max-width: 39.9375em) {
       .splash-page .smc-logo {
         flex-direction: column; 
-        height: 450px; 
+        /* height: 450px;  */
       } }
   .splash-page .smc-logo p {
     margin-bottom: 0;
@@ -141,7 +141,9 @@
           padding: 0;
           margin: 0; }
         .splash-page .panel--top-left__text p {
-          font-size: 1.05rem; }
+          font-size: 1.05rem;
+        text-align: center;
+        }
           @media (max-width: 39.9375em) {
             .splash-page .panel--top-left__text p {
               padding-left: 10px;
