@@ -1,0 +1,12 @@
+/* src/pages/Home.module.css */
+.homePage {
+    width: 100%;
+
+    margin: 0 auto;
+  }
+  
+  .projectGrid {
+    display: flex;
+    flex-wrap: wrap;
+
+  }

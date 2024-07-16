@@ -1,0 +1,68 @@
+.projectWrapper {
+  width: 50%;
+
+  box-sizing: border-box;
+}
+
+.project {
+  height: 420px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+.projectLogo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectLogo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.projectTitle {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.projectText {
+  text-align: center;
+  font-size: 1.05rem;
+  padding: 0 20px;
+}
+
+.buttonWrapper {
+  text-align: center;
+}
+
+.projectButton {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .projectWrapper {
+    width: 100%;
+  }
+  
+  .project {
+    height: 450px;
+  }
+}
