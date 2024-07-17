@@ -19,13 +19,27 @@ export interface Project {
   }
   
   export interface HomePage {
-    title: string;
-    description: string;
-    buttons: Array<{ label: string; link: string }>;
-    methodology: {
-      text: string;
-      graph: string;
+    id: number;
+    status: string;
+    header: string;
+    header_buttons: Array<{ label: string; link: string }>;
+    methodology: string;
+    menu: Array<{ label: string; link: string }>;
+    footer: string;
+    methodology_graph: {
+      id: string;
+      storage: string;
+      filename_disk: string;
+      filename_download: string;
+      title: string;
+      type: string;
+      uploaded_by: string;
+      uploaded_on: string;
+      filesize: number;
+      width: number;
+      height: number;
     };
+    projects: Project[];
+    partner: Partner[];
   }
   
-  // Add more types as needed

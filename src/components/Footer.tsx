@@ -1,38 +1,71 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import styles from './Footer.module.css';
 
-const Footer: React.FC = () => (
-  <footer className='footer'>
-    <div className="row expanded footer--darken">
-      <div className="column large-4 on-small-center">
-        <h5>Sections</h5>
-      </div>
-      <div className="column large-4 partner-no-show">
-        <h5></h5>
-      </div>
-      <div className="column large-4 partner-no-show">
-        <h5 className="padding-left">About</h5>
-      </div>
-    </div>
-    <div className="row expanded align-center">
-      <div className="column large-4 small-12">
-        <nav className="footer__nav">
-          <a href="/about.html">About</a>
-          <a href="http://anticorruption.smartercrowdsourcing.org/">Anti-Corruption</a>
-          <a href="http://zika.smartercrowdsourcing.org/">Zika</a>
-          <a href="#">Cotopaxi</a>
-          <a href="mailto:info@thegovlab.org">Contact</a>
-        </nav>
-      </div>
-      <div className="column large-4 small-12">
-        <div className="footer-logo">
-          <img src="/images/smarter-crowdsourcing-logo-03.svg" alt="" />
+interface FooterProps {
+  menu: Array<{ label: string; link: string }>;
+  footer: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ menu, footer }) => {
+  const [svgContent, setSvgContent] = useState<string | null>(null);
+  const svgUrl = 'https://content.smartercrowdsourcing.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5';
+
+  useEffect(() => {
+    const fetchSvg = async () => {
+      try {
+        const response = await fetch(svgUrl);
+        let text = await response.text();
+        if (text.includes('<svg')) {
+          setSvgContent(text);
+        }
+      } catch (error) {
+        console.error('Error fetching SVG:', error);
+      }
+    };
+
+    fetchSvg();
+  }, []);
+
+  return (
+    <footer className={styles.footer}>
+      <div className={`${styles.row} ${styles.footerDarken}`}>
+        <div className={styles.column}>
+          <h5>Sections</h5>
+        </div>
+        <div className={styles.column}>
+          <h5>About</h5>
         </div>
       </div>
-      <div className="column large-4 small-12">
-        <p className="footer-about">Smarter Crowdsourcing is a method that combines rigorous problem definition with crowdsourcing to attract diverse ideas from global experts and rapidly develop those ideas into actionable proposals.</p>
+      <div className={styles.row}>
+        <div className={styles.column}>
+          <nav className={styles.footerNav}>
+            {menu.map((item, index) => (
+              <a key={index} href={item.link}>{item.label}</a>
+            ))}
+          </nav>
+        </div>
+        <div className={styles.column}>
+          <div className={styles.footerLogo}>
+            {svgContent ? (
+              <div
+                className={styles.projectLogo}
+                dangerouslySetInnerHTML={{ __html: svgContent }}
+              />
+            ) : (
+              <img
+                className={styles.projectLogo}
+                src={svgUrl}
+                alt="Footer Logo"
+              />
+            )}
+          </div>
+        </div>
+        <div className={styles.column}>
+          <p className={styles.footerAbout} dangerouslySetInnerHTML={{ __html: footer }}></p>
+        </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;

@@ -8,19 +8,6 @@ const api = axios.create({
 });
 
 export const fetchHomePage = async () => {
-  const response = await api.get('/items/smc_hp');
+  const response = await api.get('/items/smc_hp?fields=*.*');
   return response.data.data;
 };
-
-export const fetchProjects = async () => {
-  const response = await api.get('/items/smc_projects');
-  console.log(response.data.data);
-  return response.data.data;
-};
-
-export const fetchPartners = async () => {
-  const response = await api.get('/items/smc_partner');
-  return response.data.data;
-};
-
-// Add more API calls as needed

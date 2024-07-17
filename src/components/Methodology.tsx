@@ -1,15 +1,19 @@
 import React from 'react';
+import styles from './Methodology.module.css';
 
-const Methodology: React.FC = () => (
-  <section className="methodology">
-    <div className="row expanded align-center">
-      <div className="column large-6 small-12">
-        <h5 className="top">Problem Identification and Definition</h5>
-        <p>Using our problem definition methodology, we break down a larger issue into actionable, focused problems. Government partners prioritize among problems, selecting the ones to focus on.</p>
-        {/* Add other methodology steps */}
+interface MethodologyProps {
+  text: string;
+  graph: string;
+}
+
+const Methodology: React.FC<MethodologyProps> = ({ text, graph }) => (
+  <section className={styles.methodology}>
+    <div className={styles.row}>
+      <div className={styles.column}>
+        <div dangerouslySetInnerHTML={{ __html: text }} />
       </div>
-      <div className="column large-8 small-12">
-        <img className="methodology__img" src="/images/phase-graphic-en.png" alt="Methodology" />
+      <div className={styles.column}>
+        <img className={styles.methodologyImg} src={`https://content.smartercrowdsourcing.org/assets/${graph}`} alt="Methodology Graph" />
       </div>
     </div>
   </section>

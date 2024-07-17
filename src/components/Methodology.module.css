@@ -1,0 +1,25 @@
+.methodology {
+    padding: 2rem 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .methodologyImg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .column {
+      flex-basis: 100%;
+    }
+  }

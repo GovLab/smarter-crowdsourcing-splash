@@ -18,7 +18,7 @@ const Project: React.FC<ProjectType> = ({
     const fetchSvg = async () => {
       try {
         const response = await fetch(`https://content.smartercrowdsourcing.org/assets/${icon}`);
-        const text = await response.text();
+        let text = await response.text();
         if (text.includes('<svg')) {
           setSvgContent(text);
         }
@@ -44,10 +44,13 @@ const Project: React.FC<ProjectType> = ({
     >
       <div className={styles.project} style={projectStyle}>
         {svgContent ? (
-          <div 
-            className={styles.projectLogo}
-            dangerouslySetInnerHTML={{ __html: svgContent }}
-          />
+      <object 
+      type="image/svg+xml"
+      data={`data:image/svg+xml;charset=utf-8,${encodeURIComponent(svgContent)}`}
+      className={styles.projectLogo}
+    >
+      {title} Logo
+    </object>
         ) : (
           <img 
             className={styles.projectLogo} 

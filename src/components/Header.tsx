@@ -1,21 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import styles from './Header.module.css';
 
-const Header: React.FC = () => (
-  <header className="top-bar top-bar--transparent">
-    <span className="top-bar__button js-trigger-menu">menu</span>
-    <nav className="main-menu js-target-menu main-menu--left">
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="http://anticorruption.smartercrowdsourcing.org/">Anti-Corruption</a>
-      <a href="http://zika.smartercrowdsourcing.org/">Zika</a>
-      <a href="http://cotopaxi.smartercrowdsourcing.org/">Cotopaxi</a>
-      <a href="mailto:info@thegovlab.org">Contact</a>
-    </nav>
-    <a className="top-bar__logo" href="/index.html">
-      <img id="govlab-logo" src="/images/the-govlab-logo-white.svg" alt="The GovLab" />
-      <img src="/images/burnes-center-logo.png" alt="The GovLab" />
-    </a>
-  </header>
-);
+interface HeaderProps {
+  menu: Array<{ label: string; link: string }>;
+}
+
+const Header: React.FC<HeaderProps> = ({ menu }) => {
+  const [govlabLogo, setGovlabLogo] = useState<string | null>(null);
+
+  const govlabLogoUrl = 'https://content.smartercrowdsourcing.org/assets/8eaa4206-808d-48be-b7b0-be7912b8f74b';
+  const burnesCenterLogoUrl = 'https://content.smartercrowdsourcing.org/assets/e8582384-957d-46d1-92e7-8d0dce0a27f2';
+
+  useEffect(() => {
+    const fetchGovLabLogo = async () => {
+      try {
+        const response = await fetch(govlabLogoUrl);
+        const text = await response.text();
+        setGovlabLogo(text);
+      } catch (error) {
+        console.error('Error fetching GovLab logo:', error);
+      }
+    };
+
+    fetchGovLabLogo();
+  }, []);
+
+  return (
+    <header className={styles.header}>
+      <div className={styles.menuButton}>
+        <span className={styles.hamburger}>&#9776;</span>
+      </div>
+      <div className={styles.logos}>
+      <img 
+          src={govlabLogoUrl} 
+          alt="The Govlab" 
+          className={styles.burnesCenterLogo}
+        />
+        <img 
+          src={burnesCenterLogoUrl} 
+          alt="Burnes Center" 
+          className={styles.burnesCenterLogo}
+        />
+      </div>
+    </header>
+  );
+};
 
 export default Header;
