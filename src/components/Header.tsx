@@ -3,12 +3,10 @@ import styles from './Header.module.css';
 
 interface HeaderProps {
   menu: Array<{ label: string; link: string }>;
-  content: string;
-  header_buttons: Array<{ label: string; link: string }>;
 }
 
-const Header: React.FC<HeaderProps> = ({ menu, content, header_buttons }) => {
-  const [govlabLogo, setGovlabLogo] = useState<string | null>(null);
+const Header: React.FC<HeaderProps> = ({ menu }) => {
+  const setGovlabLogo = useState<string | null>(null)[1];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 

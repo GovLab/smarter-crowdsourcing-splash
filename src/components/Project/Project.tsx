@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, CSSProperties } from 'react';
 import { Project as ProjectType } from '../../types';
 import styles from './Project.module.css';
 
@@ -42,12 +42,12 @@ const Project: React.FC<ProjectProps> = ({
     backgroundColor: hover ? '#FFAA00' : bgColor,
   };
 
-  const projectWrapperStyle = isFullWidth ? {
+  const projectWrapperStyle: CSSProperties = isFullWidth ? {
     width: '100%',
     backgroundImage: `url(https://content.smartercrowdsourcing.org/assets/${image}?height=400&quality=80)`,
     backgroundColor: 'rgb(44, 71, 88)',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as 'column', // Explicitly type as 'column'
     justifyContent: 'flex-start',
   } : {};
 

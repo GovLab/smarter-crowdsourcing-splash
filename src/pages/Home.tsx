@@ -34,7 +34,7 @@ const Home: React.FC = () => {
   return (
     
     <div className={styles.homePage }>
-        <Header menu={homeData.menu}  />
+        <Header menu={homeData.menu}   />
         {/* <HeaderContent content={homeData.header} header_buttons={homeData.header_buttons} /> */}
       <div className={styles.projectGrid}>
       {projects.map((project, index) => (
