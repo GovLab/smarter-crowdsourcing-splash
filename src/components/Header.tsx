@@ -6,7 +6,7 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ menu }) => {
-  const [govlabLogo, setGovlabLogo] = useState<string | null>(null);
+  const setGovlabLogo = useState<string | null>(null)[1];
 
   const govlabLogoUrl = 'https://content.smartercrowdsourcing.org/assets/8eaa4206-808d-48be-b7b0-be7912b8f74b';
   const burnesCenterLogoUrl = 'https://content.smartercrowdsourcing.org/assets/e8582384-957d-46d1-92e7-8d0dce0a27f2';
@@ -29,6 +29,11 @@ const Header: React.FC<HeaderProps> = ({ menu }) => {
     <header className={styles.header}>
       <div className={styles.menuButton}>
         <span className={styles.hamburger}>&#9776;</span>
+        <nav className={styles.footerNav}>
+            {menu.map((item, index) => (
+              <a key={index} href={item.link}>{item.label}</a>
+            ))}
+          </nav>
       </div>
       <div className={styles.logos}>
       <img 

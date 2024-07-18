@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Project as ProjectType, HomePage, Partner } from '../types';
+import { HomePage } from '../types';
 import Header from '../components/Header';
 import Project from '../components/Project/Project';
 import Methodology from '../components/Methodology';
