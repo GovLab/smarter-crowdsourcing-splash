@@ -2,14 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { Project as ProjectType } from '../../types';
 import styles from './Project.module.css';
 
-const Project: React.FC<ProjectType> = ({
+interface ProjectProps extends ProjectType {
+  isFullWidth?: boolean;
+  isFirst?: boolean;
+}
+
+const Project: React.FC<ProjectProps> = ({
   title,
   description,
   image,
   icon,
   bgColor,
   link,
-  buttons
+  buttons,
+  isFullWidth = false,
+  isFirst = false
 }) => {
   const [svgContent, setSvgContent] = useState<string | null>(null);
   const [hover, setHover] = useState(false);
@@ -35,13 +42,41 @@ const Project: React.FC<ProjectType> = ({
     backgroundColor: hover ? '#FFAA00' : bgColor,
   };
 
+  const projectWrapperStyle = isFullWidth ? {
+    width: '100%',
+    backgroundImage: `url(https://content.smartercrowdsourcing.org/assets/${image}?height=400&quality=80)`,
+    backgroundColor: 'rgb(44, 71, 88)',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  } : {};
+
+  const handleClick = () => {
+    if (!isFirst) {
+      window.location.href = link;
+    }
+  };
+
+  const handleMouseEnter = () => {
+    if (!isFirst) {
+      setHover(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isFirst) {
+      setHover(false);
+    }
+  };
+
   return (
-    <div 
-      className={styles.projectWrapper} 
-      onClick={() => window.location.href = link}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
+    <div
+    className={`${styles.projectWrapper} ${isFullWidth ? styles.fullWidth : ''}`}
+    style={projectWrapperStyle}
+    onClick={handleClick}
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+  >
       <div className={styles.project} style={projectStyle}>
         {svgContent ? (
       <object 
@@ -60,19 +95,23 @@ const Project: React.FC<ProjectType> = ({
         )}
         <h3 className={styles.projectTitle}>{title}</h3>
         <p className={styles.projectText}>{description}</p>
-        {buttons && buttons.map((button, index) => (
-          <div key={index} className={styles.buttonWrapper}>
-            <button 
-              className={styles.projectButton} 
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(button.link, '_blank');
-              }}
-            >
-              {button.label}
-            </button>
-          </div>
-        ))}
+        {buttons && (
+        <div className={styles.buttonRow}>
+          {buttons.map((button, index) => (
+            <div key={index} className={styles.buttonWrapper}>
+              <button
+                className={styles.projectButton}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(button.link, '_blank');
+                }}
+              >
+                {button.label}
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
       </div>
     </div>
   );

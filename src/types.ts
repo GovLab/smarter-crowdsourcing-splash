@@ -22,6 +22,7 @@ export interface Project {
     id: number;
     status: string;
     header: string;
+    content: string;
     header_buttons: Array<{ label: string; link: string }>;
     methodology: string;
     menu: Array<{ label: string; link: string }>;

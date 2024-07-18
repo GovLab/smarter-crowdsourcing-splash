@@ -29,15 +29,22 @@ const Home: React.FC = () => {
   }
 
   const { projects, partner: partners, methodology, methodology_graph } = homeData;
+  const isOddNumber = projects.length % 2 !== 0;
 
   return (
     
-    <div className={styles.homePage}>
-        <Header menu={homeData.menu} />
+    <div className={styles.homePage }>
+        <Header menu={homeData.menu}  />
+        {/* <HeaderContent content={homeData.header} header_buttons={homeData.header_buttons} /> */}
       <div className={styles.projectGrid}>
-        {projects.map((project) => (
-          <Project key={project.id} {...project} />
-        ))}
+      {projects.map((project, index) => (
+        <Project
+          key={project.id}
+          {...project}
+          isFullWidth={isOddNumber && index === 0}
+          isFirst={isOddNumber && index === 0}
+        />
+      ))}
       </div>
       <div className="divider divider--blue"> <h1>Our Methodology</h1> </div>
       <Methodology text={methodology} graph={methodology_graph.id} />
