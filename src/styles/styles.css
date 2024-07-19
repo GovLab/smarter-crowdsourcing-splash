@@ -2725,7 +2725,7 @@ input[type="file"] i,
     font-weight: 300;
     display: inline-block;
     position: relative;
-    vertical-align: top;
+    /* vertical-align: top; */
     background-color: white;
     padding: 30px 30px 20px;
     width: 100%;
