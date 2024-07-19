@@ -54,6 +54,7 @@
   font-size: 1.8rem;
   text-align: center;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .projectText {
@@ -70,11 +71,19 @@
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #0000001a;
   cursor: pointer;
   padding: 15px 20px;
   margin: 2px;
   text-decoration: none;
+  color: #fff;
+  border-radius: 0;
+  border: 0;
+  transition: all .4s ease;
+}
+
+.projectButton:hover {
+  background-color: rgba(0, 0, 0, 0.2);
   color: #fff;
 }
 

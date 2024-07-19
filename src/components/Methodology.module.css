@@ -1,6 +1,19 @@
 .methodology {
     padding: 2rem 0;
   }
+
+  .methodology h5{
+    font-size: 1.3rem;
+    color: #2c4758;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .methodology p{
+    margin-top: 0;
+  }
+
+  
   
   .row {
     display: flex;
