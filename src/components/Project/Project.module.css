@@ -31,6 +31,7 @@
   justify-content: flex-start;
   transition: background-color 0.3s ease;
   align-items: center;
+  cursor: pointer;
 }
 
 
@@ -66,12 +67,15 @@
 }
 
 .projectButton {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
+  display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  padding: 15px 20px;
+  margin: 2px;
+  text-decoration: none;
+  color: #fff;
 }
 
 @media (max-width: 768px) {

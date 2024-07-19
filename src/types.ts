@@ -26,7 +26,7 @@ export interface Project {
     header_buttons: Array<{ label: string; link: string }>;
     methodology: string;
     menu: Array<{ label: string; link: string }>;
-    footer: string;
+    about: string;
     methodology_graph: {
       id: string;
       storage: string;

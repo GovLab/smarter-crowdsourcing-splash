@@ -56,7 +56,7 @@ const Home: React.FC = () => {
         <h1>Partners</h1>
       </div>
         <Partners partners={partners} />
-      <Footer menu={homeData.menu} footer={homeData.footer} />
+      <Footer menu={homeData.menu} about={homeData.about} />
     </div>
   );
 };

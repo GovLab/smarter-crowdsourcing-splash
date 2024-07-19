@@ -1,0 +1,19 @@
+.logo {
+  width: 33%;
+}
+
+.logoWrapper {
+  width: 100%;
+  background-color: rgb(44, 71, 88);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 100%;
+  }
+}

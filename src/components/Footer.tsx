@@ -1,12 +1,14 @@
 import React, { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './Footer.module.css';
 
 interface FooterProps {
   menu: Array<{ label: string; link: string }>;
-  footer: string;
+  about: string;
 }
 
-const Footer: React.FC<FooterProps> = ({ menu, footer }) => {
+const Footer: React.FC<FooterProps> = ({ menu, about }) => {
   const [svgContent, setSvgContent] = useState<string | null>(null);
   const svgUrl = 'https://content.smartercrowdsourcing.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5';
 
@@ -31,13 +33,17 @@ const Footer: React.FC<FooterProps> = ({ menu, footer }) => {
         <div className={styles.footerLeft}>
           <h5>SECTIONS</h5>
           <nav className={styles.footerNav}>
-            {menu.map((item, index) => (
-              <a key={index} href={item.link}>{item.label}</a>
-            ))}
+          {menu.map((item, index) => (
+  <Link key={index} to={item.link}>
+    {item.label}
+  </Link>
+))}
+            
           </nav>
         </div>
         <div className={styles.footerCenter}>
         <div className={styles.footerLogo}>
+        <Link to={'/'}>
             {svgContent ? (
               <div
                 dangerouslySetInnerHTML={{ __html: svgContent }}
@@ -49,12 +55,13 @@ const Footer: React.FC<FooterProps> = ({ menu, footer }) => {
                 alt="Footer Logo"
               />
             )}
+              </Link>
           </div>
 
         </div>
         <div className={styles.footerRight}>
           <h5>ABOUT</h5>
-          <p dangerouslySetInnerHTML={{ __html: footer }}></p>
+          <p dangerouslySetInnerHTML={{ __html: about }}></p>
         </div>
       </div>
       <div className={styles.footerBottom}>
