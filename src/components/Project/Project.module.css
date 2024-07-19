@@ -23,7 +23,7 @@
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   background-blend-mode: multiply;
   padding: 20px;
   display: flex;
