@@ -12,9 +12,9 @@ const Methodology: React.FC<MethodologyProps> = ({ text, graph }) => (
       <div className={styles.column}>
         <div dangerouslySetInnerHTML={{ __html: text }} />
       </div>
-      <div className={styles.column}>
+      
         <img className={styles.methodologyImg} src={`https://content.smartercrowdsourcing.org/assets/${graph}`} alt="Methodology Graph" />
-      </div>
+      
     </div>
   </section>
 );

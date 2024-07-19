@@ -60,7 +60,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
+  padding: 10px 10px;
   margin-top: 40px;
 }
 
@@ -72,6 +72,7 @@ h5 {
 .footerBottom p {
   font-size: 0.8em;
   margin: 0;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -87,6 +88,10 @@ h5 {
   }
 
   .footerNav {
+    align-items: center;
+  }
+  .footerBottom {
+   flex-direction: column;
     align-items: center;
   }
 }
