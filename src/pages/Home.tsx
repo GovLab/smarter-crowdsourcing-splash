@@ -5,8 +5,11 @@ import Project from '../components/Project/Project';
 import Methodology from '../components/Methodology';
 import Partners from '../components/Partners';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
+
 import { fetchHomePage } from '../api';
 import styles from './Home.module.css';
+
 
 const Home: React.FC = () => {
   const [homeData, setHomeData] = useState<HomePage | null>(null);
@@ -32,6 +35,13 @@ const Home: React.FC = () => {
   const isOddNumber = projects.length % 2 !== 0;
 
   return (
+    <>
+    <SEO 
+    title={projects[0].title}
+    description={projects[0].description}
+    image={'https://content.smartercrowdsourcing.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5'}
+    url={'https://smartercrowdsourcing.org/'}
+  />
     <div className={styles.homePage}>
       <Header menu={homeData.menu} />
       <div className={styles.splashPage}>
@@ -58,6 +68,7 @@ const Home: React.FC = () => {
         <Partners partners={partners} />
       <Footer menu={homeData.menu} about={homeData.about} />
     </div>
+    </>
   );
 };
 
