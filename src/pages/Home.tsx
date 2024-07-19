@@ -46,9 +46,9 @@ const Home: React.FC = () => {
         />
       ))}
       </div>
-      <div className="divider divider--blue"> <h1>Our Methodology</h1> </div>
+      <div className={styles.divider}> <h1>Our Methodology</h1> </div>
       <Methodology text={methodology} graph={methodology_graph.id} />
-      <div className="divider divider--blue"> <h1>Partner</h1> </div>
+      <div className={`${styles.divider} ${styles["divider--blue"]}`} > <h1>Partner</h1> </div>
       <Partners partners={partners} />
       <Footer menu={homeData.menu} footer={homeData.footer} />
     </div>

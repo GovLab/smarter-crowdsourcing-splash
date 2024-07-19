@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import styles from './Footer.module.css';
 
 interface FooterProps {
@@ -25,44 +25,41 @@ const Footer: React.FC<FooterProps> = ({ menu, footer }) => {
 
     fetchSvg();
   }, []);
-
   return (
     <footer className={styles.footer}>
-      <div className={`${styles.row} ${styles.footerDarken}`}>
-        <div className={styles.column}>
-          <h5>Sections</h5>
-        </div>
-        <div className={styles.column}>
-          <h5>About</h5>
-        </div>
-      </div>
-      <div className={styles.row}>
-        <div className={styles.column}>
+      <div className={styles.footerContent}>
+        <div className={styles.footerLeft}>
+          <h5>SECTIONS</h5>
           <nav className={styles.footerNav}>
             {menu.map((item, index) => (
               <a key={index} href={item.link}>{item.label}</a>
             ))}
           </nav>
         </div>
-        <div className={styles.column}>
-          <div className={styles.footerLogo}>
+        <div className={styles.footerCenter}>
+        <div className={styles.footerLogo}>
             {svgContent ? (
               <div
-                className={styles.projectLogo}
                 dangerouslySetInnerHTML={{ __html: svgContent }}
               />
             ) : (
               <img
-                className={styles.projectLogo}
+
                 src={svgUrl}
                 alt="Footer Logo"
               />
             )}
           </div>
+
         </div>
-        <div className={styles.column}>
-          <p className={styles.footerAbout} dangerouslySetInnerHTML={{ __html: footer }}></p>
+        <div className={styles.footerRight}>
+          <h5>ABOUT</h5>
+          <p dangerouslySetInnerHTML={{ __html: footer }}></p>
         </div>
+      </div>
+      <div className={styles.footerBottom}>
+        <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Creative Commons License" className={styles.ccIcon} />
+        <p>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
       </div>
     </footer>
   );
