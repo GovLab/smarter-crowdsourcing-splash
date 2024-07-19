@@ -39,7 +39,7 @@ const Home: React.FC = () => {
     <SEO 
     title={projects[0].title}
     description={projects[0].description}
-    image={'https://content.smartercrowdsourcing.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5'}
+    image={`https://content.smartercrowdsourcing.org/assets/${homeData.methodology_graph.id}`}
     url={'https://smartercrowdsourcing.org/'}
   />
     <div className={styles.homePage}>
