@@ -32,24 +32,30 @@ const Home: React.FC = () => {
   const isOddNumber = projects.length % 2 !== 0;
 
   return (
-    
-    <div className={styles.homePage }>
-        <Header menu={homeData.menu}   />
-        {/* <HeaderContent content={homeData.header} header_buttons={homeData.header_buttons} /> */}
-      <div className={styles.projectGrid}>
-      {projects.map((project, index) => (
-        <Project
-          key={project.id}
-          {...project}
-          isFullWidth={isOddNumber && index === 0}
-          isFirst={isOddNumber && index === 0}
-        />
-      ))}
+    <div className={styles.homePage}>
+      <Header menu={homeData.menu} />
+      <div className={styles.splashPage}>
+        <div className={styles.projectGrid}>
+          {projects.map((project, index) => (
+            <Project
+              key={project.id}
+              {...project}
+              isFullWidth={isOddNumber && index === 0}
+              isFirst={isOddNumber && index === 0}
+            />
+          ))}
+        </div>
       </div>
-      <div className={styles.divider}> <h1>Our Methodology</h1> </div>
-      <Methodology text={methodology} graph={methodology_graph.id} />
-      <div className={`${styles.divider} ${styles["divider--blue"]}`} > <h1>Partner</h1> </div>
-      <Partners partners={partners} />
+      <div className={`${styles.divider} ${styles.dividerBlue}`}>
+        <h1>Our Methodology</h1>
+      </div>
+      <div className={styles.methodology}>
+        <Methodology text={methodology} graph={methodology_graph.id} />
+      </div>
+      <div className={`${styles.divider} ${styles.dividerBlue}`}>
+        <h1>Partners</h1>
+      </div>
+        <Partners partners={partners} />
       <Footer menu={homeData.menu} footer={homeData.footer} />
     </div>
   );
