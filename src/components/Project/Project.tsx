@@ -40,6 +40,7 @@ const Project: React.FC<ProjectProps> = ({
   const projectStyle = {
     backgroundImage: `url('https://content.smartercrowdsourcing.org/assets/${image}?height=400&quality=80')`,
     backgroundColor: hover ? '#FFAA00' : bgColor,
+    cursor: isFirst ? 'default' : 'pointer',
   };
 
   const projectWrapperStyle: CSSProperties = isFullWidth ? {
@@ -49,6 +50,7 @@ const Project: React.FC<ProjectProps> = ({
     display: 'flex',
     flexDirection: 'column' as 'column', // Explicitly type as 'column'
     justifyContent: 'flex-start',
+    
   } : {};
 
   const handleClick = () => {
