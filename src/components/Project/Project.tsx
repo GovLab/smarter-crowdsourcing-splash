@@ -24,7 +24,7 @@ const Project: React.FC<ProjectProps> = ({
   useEffect(() => {
     const fetchSvg = async () => {
       try {
-        const response = await fetch(`https://content.smartercrowdsourcing.org/assets/${icon}`);
+        const response = await fetch(`https://directus.theburnescenter.org/assets/${icon}`);
         let text = await response.text();
         if (text.includes('<svg')) {
           setSvgContent(text);
@@ -38,14 +38,14 @@ const Project: React.FC<ProjectProps> = ({
   }, [icon]);
 
   const projectStyle = {
-    backgroundImage: `url('https://content.smartercrowdsourcing.org/assets/${image}?height=400&quality=80')`,
+    backgroundImage: `url('https://directus.theburnescenter.org/assets/${image}?height=400&quality=80')`,
     backgroundColor: hover ? '#FFAA00' : bgColor,
     cursor: isFirst ? 'default' : 'pointer',
   };
 
   const projectWrapperStyle: CSSProperties = isFullWidth ? {
     width: '100%',
-    backgroundImage: `url(https://content.smartercrowdsourcing.org/assets/${image}?height=400&quality=80)`,
+    backgroundImage: `url(https://directus.theburnescenter.org/assets/${image}?height=400&quality=80)`,
     backgroundColor: 'rgb(44, 71, 88)',
     display: 'flex',
     flexDirection: 'column' as 'column', // Explicitly type as 'column'
@@ -91,7 +91,7 @@ const Project: React.FC<ProjectProps> = ({
         ) : (
           <img 
             className={styles.projectLogo} 
-            src={`https://content.smartercrowdsourcing.org/assets/${icon}`} 
+            src={`https://directus.theburnescenter.org/assets/${icon}`} 
             alt={`${title} Logo`} 
           />
         )}

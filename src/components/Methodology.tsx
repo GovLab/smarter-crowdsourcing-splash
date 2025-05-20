@@ -13,7 +13,7 @@ const Methodology: React.FC<MethodologyProps> = ({ text, graph }) => (
         <div dangerouslySetInnerHTML={{ __html: text }} />
       </div>
       
-        <img className={styles.methodologyImg} src={`https://content.smartercrowdsourcing.org/assets/${graph}`} alt="Methodology Graph" />
+        <img className={styles.methodologyImg} src={`https://directus.theburnescenter.org/assets/${graph}`} alt="Methodology Graph" />
       
     </div>
   </section>

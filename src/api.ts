@@ -1,7 +1,7 @@
 // src/api.ts
 import axios from 'axios';
 
-export const BASE_URL = 'https://content.smartercrowdsourcing.org/';
+export const BASE_URL = 'https://directus.theburnescenter.org/';
 
 const api = axios.create({
   baseURL: BASE_URL,

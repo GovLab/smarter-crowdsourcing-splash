@@ -15,7 +15,7 @@ import stylesAbout from './About.module.css';
 
 const About: React.FC = () => {
   const [svgContent, setSvgContent] = useState<string | null>(null);
-  const svgUrl = 'https://content.smartercrowdsourcing.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5';
+  const svgUrl = 'https://directus.theburnescenter.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5';
   const [homeData, setHomeData] = useState<HomePage | null>(null);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const About: React.FC = () => {
     <SEO 
     title={'Smartercrowdsourcing'}
     description={homeData.about}
-    image={`https://content.smartercrowdsourcing.org/assets/${homeData.methodology_graph.id}`}
+    image={`https://directus.theburnescenter.org/assets/${homeData.methodology_graph.id}`}
     url={'https://smartercrowdsourcing.org/'}
   />
     <div className={stylesHome.homePage}>

@@ -10,8 +10,8 @@ const Header: React.FC<HeaderProps> = ({ menu }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const govlabLogoUrl = 'https://content.smartercrowdsourcing.org/assets/8eaa4206-808d-48be-b7b0-be7912b8f74b';
-  const burnesCenterLogoUrl = 'https://content.smartercrowdsourcing.org/assets/e8582384-957d-46d1-92e7-8d0dce0a27f2';
+  const govlabLogoUrl = 'https://directus.theburnescenter.org/assets/8eaa4206-808d-48be-b7b0-be7912b8f74b';
+  const burnesCenterLogoUrl = 'https://directus.theburnescenter.org/assets/e8582384-957d-46d1-92e7-8d0dce0a27f2';
 
   useEffect(() => {
     const fetchGovLabLogo = async () => {

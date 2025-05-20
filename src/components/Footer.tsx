@@ -10,7 +10,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ menu, about }) => {
   const [svgContent, setSvgContent] = useState<string | null>(null);
-  const svgUrl = 'https://content.smartercrowdsourcing.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5';
+  const svgUrl = 'https://directus.theburnescenter.org/assets/839923d2-7777-4c6c-ba88-ed16a5d1d3a5';
 
   useEffect(() => {
     const fetchSvg = async () => {

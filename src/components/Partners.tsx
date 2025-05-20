@@ -12,7 +12,7 @@ const Partners: React.FC<PartnersProps> = ({ partners }) => (
     {partners.map((partner, index) => (
       <div key={index} className={styles.imgContainer}>
         <a href={partner.link} target="_blank" rel="noopener noreferrer">
-          <img src={`https://content.smartercrowdsourcing.org/assets/${partner.logo}`} alt={partner.name} />
+          <img src={`https://directus.theburnescenter.org/assets/${partner.logo}`} alt={partner.name} />
         </a>
       </div>
     ))}
